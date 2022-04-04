@@ -11,10 +11,10 @@ import os
 import random
 import shutil
 # change these as necessary
-original_path = r"D:\Ari\Uni\TUE\8P361\train+val\train"
-subsampled_path = r"D:\Ari\Uni\TUE\8P361\train+val_sub_75\train"
+original_path = r"C:\Users\maber\Desktop\ari\8P361\train+val_sub_75\train"
+subsampled_path = r"C:\Users\maber\Desktop\ari\8P361\train+val_sub_25\train"
 # change this to whatever you want
-subsample_factor = 0.75
+subsample_factor = 1/3
 try:
     os.makedirs(subsampled_path)
     os.mkdir(subsampled_path + r"\0")

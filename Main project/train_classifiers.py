@@ -24,12 +24,12 @@ from utils import get_pcam_generators
 
 
 image_size = (32, 32)
-batch_size = 128
-epochs = 2
-steps = 144000 // batch_size
+batch_size = 256
+epochs = 20
+steps = 36000 // batch_size
 val_steps = 16000 // batch_size
 # Change this to whatever you're doing, it will automatically change the filenames that it saves to
-subsample_factor = 75
+subsample_factor = 25
 model_name_1 = 'transfer'
 model_name_2 = 'standard'
 model_name_3 = 'densenet'
@@ -41,7 +41,7 @@ discriminator = keras.models.load_model('models/gan_discriminator_epoch_Upsampli
                                         custom_objects={'MinibatchDiscrimination': MinibatchDiscrimination,
                                                         'GlorotUniform': init})
 # change this path to where you have the SUBSAMPLED dataset
-train_gen, val_gen = get_pcam_generators(r'C:\Users\justi\PycharmProjects\pythonProject\train+val',
+train_gen, val_gen = get_pcam_generators(r'C:\Users\maber\Desktop\ari\8P361\train+val_sub_25',
                                          image_size, batch_size, batch_size)
 transfer = transfer_classifier(discriminator)
 standard = classifier(discriminator)

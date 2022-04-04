@@ -14,7 +14,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
 from IPython import display
-from keras.layers import Conv2D, Dense, Dropout, Flatten, Input, LeakyReLU, Reshape, Model
+from keras.layers import Conv2D, Dense, Dropout, Flatten, Input, LeakyReLU, Reshape, BatchNormalization
+from keras import Model
 
 from custom_layers import MinibatchDiscrimination, UpSampleBlock
 from utils import saveModels, plotGeneratedImagesPatchCamelyon, plotImages

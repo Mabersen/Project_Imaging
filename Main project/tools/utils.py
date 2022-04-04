@@ -17,7 +17,7 @@ Compilation of useful functions for the 8P361 course. This is divided in:
 import os
 import keras
 import numpy as np
-import matplotlib_inline as plt
+import matplotlib as plt
 
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
